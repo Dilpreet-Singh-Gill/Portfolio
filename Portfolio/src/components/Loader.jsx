@@ -11,14 +11,15 @@ export default function Loader({ onFinish }) {
       i++;
       if (i === name.length) {
         clearInterval(interval);
-        setTimeout(onFinish, 800);
+        setTimeout(onFinish, 700);
       }
     }, 120);
+
     return () => clearInterval(interval);
   }, [onFinish]);
 
   return (
-    <div className="h-screen flex items-center justify-center text-3xl sm:text-4xl font-bold">
+    <div className="h-screen flex items-center justify-center text-3xl sm:text-4xl font-bold tracking-wide">
       {text}
     </div>
   );

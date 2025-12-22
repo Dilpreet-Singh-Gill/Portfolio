@@ -1,17 +1,19 @@
 import { useState } from "react";
-import Loader from "../components/Loader";
-import FallingBalls from "../components/FallingBalls";
+import Loader from "../components/Loader.jsx";
+import FallingBalls from "../components/FallingBalls.jsx";
 import Home from "../components/Home.jsx";
-import Experience from "../components/Experience";
-import Projects from "../components/Projects";
-import Achievements from "../components/Achievements";
-import Responsibilities from "../components/Responsibilities";
-import Connect from "../components/Connect";
+import Experience from "../components/Experience.jsx";
+import Projects from "../components/Projects.jsx";
+import Achievements from "../components/Achievements.jsx";
+import Responsibilities from "../components/Responsibilities.jsx";
+import Connect from "../components/Connect.jsx";
 
 export default function MainPage() {
   const [loaded, setLoaded] = useState(false);
 
-  if (!loaded) return <Loader onFinish={() => setLoaded(true)} />;
+  if (!loaded) {
+    return <Loader onFinish={() => setLoaded(true)} />;
+  }
 
   return (
     <>

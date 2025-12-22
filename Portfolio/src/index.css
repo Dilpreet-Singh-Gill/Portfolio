@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 body {
-  background-color: #000;
-  color: white;
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 60%);
+  color: #e5e7eb; /* soft white */
+  font-family: ui-sans-serif, system-ui, -apple-system;
+}
+
+/* remove default margins */
+section {
+  scroll-margin-top: 80px;
 }
