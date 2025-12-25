@@ -1,12 +1,14 @@
 import { useState } from "react";
 import Loader from "../components/Loader.jsx";
 import FallingBalls from "../components/FallingBalls.jsx";
-import Home from "../components/Home.jsx";
-import Experience from "../components/Experience.jsx";
-import Projects from "../components/Projects.jsx";
-import Achievements from "../components/Achievements.jsx";
-import Responsibilities from "../components/Responsibilities.jsx";
-import Connect from "../components/Connect.jsx";
+import Hero from "../components/Hero.jsx";
+import Contact from "../components/Contact.jsx";
+import Resume from "../components/Resume.jsx";
+import Navigation from "../components/Navigation.jsx";
+import About from "../components/About.jsx";
+import Work from "../components/Work.jsx";
+import Skills from "../components/Skills.jsx";
+import Footer from "../components/Footer.jsx";
 
 export default function MainPage() {
   const [loaded, setLoaded] = useState(false);
@@ -16,14 +18,16 @@ export default function MainPage() {
   }
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <FallingBalls />
-      <Home />
-      <Experience />
-      <Projects />
-      <Achievements />
-      <Responsibilities />
-      <Connect />
-    </>
+      <Navigation />
+      <Hero />
+      <About />
+      <Work />
+      <Skills />
+      <Resume />
+      <Contact />
+      <Footer />
+    </div>
   );
 }
